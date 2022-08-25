@@ -1,0 +1,36 @@
+#root {
+  --primary: #dd9744;
+  --secondary: #f3fafe;
+  --background: #031e27;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  background-color: var(--background);
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 2rem;
+  font-family: var(--primary);
+  line-height: 1.5;
+  min-height: 100vh;
+  margin: 0;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  display: block;
+  height: 40rem;
+}
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 95%;
+}
