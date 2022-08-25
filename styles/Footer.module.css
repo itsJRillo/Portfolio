@@ -1,0 +1,35 @@
+.footer {
+  background-color: #030404;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: auto;
+  width: 100vw;
+  padding-top: 40px;
+}
+
+.derechos{
+    text-align: center;
+}
+
+.derechos a{
+  color: #fcfefc;
+  text-decoration: none;
+  transition: color;
+  transition-duration: 0.3s;
+}
+
+.derechos a:hover{
+    color: #645a6e;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+
+
