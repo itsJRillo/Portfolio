@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap');
 
+/*
+
+Primario: #12171B
+Secundario: #0c1013
+Background: #e3e4ca
+*/
+
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  background-color:  #060400;
+  background-color:  #e3e4ca;
 }
 *,
 *:before,
@@ -17,12 +25,13 @@ body {
   min-height: 100vh;
   margin: 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 body::after {
   content: "";
   display: block;
-  height: 40rem;
+  height: 30rem;
 }
 
 [class*="contenedor"] {
@@ -35,6 +44,31 @@ body::after {
   font-size: 4rem;
   text-align: center;
   font-weight: 900;
-  color: var(--primary);
   margin: 5rem 0;
 }
+
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js");
+/*
+
+VANTA.BIRDS({
+  el: "#animationBirds",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x#e3e4ca,
+  color1: #090d0f,
+  color2: #20282f,
+  quantity: 3.00,
+  backgroundAlpha: 0.00
+})
+
+
+
+*/
+@import url("https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js");
+

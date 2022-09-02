@@ -1,0 +1,41 @@
+.inicio{
+    display:flex;
+    color: #12171B;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+/*
+@media (min-width:992px) {
+    .inicio{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+}
+*/
+
+.inicio h5{
+    color: #0c1013;
+}
+
+.texto h2{
+  margin: 0 auto;
+  font-size: 64px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 14ch;
+
+  animation: typing 2s steps(14), blink .5s infinite step-end alternate;
+  overflow: hidden; 
+}
+
+@keyframes typing{
+  from {width: 0}
+}
+
+@keyframes blink {
+  50% {border-color: transparent}
+}

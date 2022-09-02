@@ -1,20 +1,52 @@
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
+import Image from "next/image";
+
+import { motion } from "framer-motion";
 
 const Header = () => {
-  return (
-    <div className={`contenedor ${styles.contenido}`}>
-      <div className={styles.barra}>
-        <h1 className={`heading ${styles.titulo}`}>Portfolio</h1>
 
+  const openResume = () => {
+    window.open("files/CV-Ismael Morillo.pdf")
+  }
+
+  return (
+    <motion.div
+      initial="hidden"
+      animate="visible"
+
+      variants={{
+        hidden: {
+          scale: 0.8,
+          opacity: 0,
+        },
+        visible: {
+          scale: 1,
+          opacity: 1,
+          transition: {
+            delay: 0.2,
+          },
+        },
+      }}
+      className={`contenedor ${styles.contenido}`}
+    >
+      <div className={styles.barra}>
+        <Image
+          priority
+          className={styles.logo}
+          src="/icons/itsjrillo.gif"
+          width={200}
+          height={200}
+          alt="logo"
+        />
         <nav className={styles.navegacion}>
           <Link href="/">Inicio</Link>
           <Link href="/about">About Me</Link>
           <Link href="/projects">Projects</Link>
-          <button type="button">Resume</button>
+          <button onClick={openResume} type="button">Resume</button>
         </nav>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
