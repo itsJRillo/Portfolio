@@ -20,16 +20,19 @@
 }
 
 .texto h2{
-  margin: 0 auto;
+  margin: 0;
   font-size: 64px;
-  font-family: 'Courier New', Courier, monospace;
   font-weight: bolder;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 14ch;
-
-  animation: typing 2s steps(14), blink .5s infinite step-end alternate;
+  width: 11ch;
+  color: #FFDE59;
+  animation: typing 3s steps(11), blink .75s infinite step-end alternate;
   overflow: hidden; 
+}
+
+.texto h3{
+  font-weight: 500;
 }
 
 @keyframes typing{

@@ -1,0 +1,27 @@
+.hr {
+  border: 0;
+  height: 1px;
+  width: 50%;
+  position: relative;
+  margin: 30px auto;
+}
+
+.centerDiamond {
+  background: #12171b;
+}
+
+.centerDiamond:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  background: #12171b;
+  display: inline-block;
+  border: 2px solid #12171b;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin: 0 0 0 -3px;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
+}

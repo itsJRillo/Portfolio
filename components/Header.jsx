@@ -5,16 +5,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const Header = () => {
-
   const openResume = () => {
-    window.open("files/CV-Ismael Morillo.pdf")
-  }
+    window.open("files/CV-Ismael Morillo.pdf");
+  };
 
   return (
     <motion.div
       initial="hidden"
       animate="visible"
-
       variants={{
         hidden: {
           scale: 0.8,
@@ -31,19 +29,23 @@ const Header = () => {
       className={`contenedor ${styles.contenido}`}
     >
       <div className={styles.barra}>
-        <Image
-          priority
-          className={styles.logo}
-          src="/icons/itsjrillo.gif"
-          width={200}
-          height={200}
-          alt="logo"
-        />
+        <a className={styles.logo}>
+          <Image
+            priority
+            src="/icons/itsjrillo.gif"
+            width={200}
+            height={200}
+            alt="logo"
+          />
+        </a>
+
         <nav className={styles.navegacion}>
           <Link href="/">Inicio</Link>
           <Link href="/about">About Me</Link>
           <Link href="/projects">Projects</Link>
-          <button onClick={openResume} type="button">Resume</button>
+          <button onClick={openResume} type="button">
+            Resume
+          </button>
         </nav>
       </div>
     </motion.div>

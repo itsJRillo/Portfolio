@@ -1,4 +1,4 @@
-import Inicio from "../components/Inicio";
+import Projects from "../components/Projects";
 import Layout from "../components/Layout";
 
 export default function Projects() {
@@ -6,6 +6,7 @@ export default function Projects() {
     
       <Layout pagina="Projects">
         <h1 className="heading">Projects</h1>
+        <Projects/>
       </Layout>
     
   );

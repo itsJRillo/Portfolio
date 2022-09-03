@@ -1,7 +1,6 @@
-import Box from "./geometries/Box";
 import styles from "../styles/Inicio.module.css";
 import { motion } from "framer-motion";
-import { Canvas } from "@react-three/fiber";
+import Script from "next/script";
 
 const Inicio = () => {
   return (
@@ -24,17 +23,12 @@ const Inicio = () => {
         }}
         className={styles.texto}
       >
-        <h5>Hello, my name is</h5>
+        <h4>Hola, mi nombre es</h4>
         <h2>Ismael Morillo</h2>
-        <p>Descripción de mi, lo que hago y a que apunto</p>
+        <h3>Me gusta diseñar cosas para la web</h3>
       </motion.div>
 
-      <Canvas>
-        <mesh>
-          <pointLight position={[10, 10, 10]} />
-          <Box />
-        </mesh>
-      </Canvas>
+      
     </div>
   );
 };
