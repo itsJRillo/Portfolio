@@ -29,7 +29,7 @@ const Header = () => {
       className={`contenedor ${styles.contenido}`}
     >
       <div className={styles.barra}>
-        <a className={styles.logo}>
+        <a href="/" className={styles.logo}>
           <Image
             priority
             src="/icons/itsjrillo.gif"
@@ -40,11 +40,11 @@ const Header = () => {
         </a>
 
         <nav className={styles.navegacion}>
-          <Link href="/">Inicio</Link>
-          <Link href="/about">About Me</Link>
-          <Link href="/projects">Projects</Link>
+          <Link href="/about">Sobre mí</Link>
+          <Link href="/proyectos">Mis proyectos</Link>
+          <Link href="/contacto">Contacto</Link>
           <button onClick={openResume} type="button">
-            Resume
+            Mi CV
           </button>
         </nav>
       </div>

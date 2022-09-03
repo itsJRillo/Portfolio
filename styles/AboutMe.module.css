@@ -7,21 +7,44 @@
 
 .parrafo {
   display: grid;
-  gap: 2rem;
   grid-template-columns: repeat(1, 1fr);
-  text-justify: center;
+  text-align: justify;
+}
+
+.parrafo p {
+  padding: 1.5rem;
+  margin-left: 1rem;
+}
+
+.techs{
+  display: flex;
+  flex-direction: row;
+  gap:2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.techs li{
+  list-style-type: square;
+  font-size: 14px;
 }
 
 @media (min-width: 768px) {
   .parrafo {
     grid-template-columns: repeat(2, 1fr);
   }
+  .parrafo p {
+    padding: 3rem;
+    margin-left: 14rem;
+  }
+
+  .techs{
+    flex-direction: column;
+  }
 }
 
-.parrafo p {
-  padding: 3rem;
-  margin-left: 10rem;
-}
+
 
 .photo {
   margin: 0 auto;

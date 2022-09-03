@@ -1,6 +1,5 @@
 import styles from "../styles/Inicio.module.css";
 import { motion } from "framer-motion";
-import Script from "next/script";
 
 const Inicio = () => {
   return (
@@ -25,9 +24,8 @@ const Inicio = () => {
       >
         <h4>Hola, mi nombre es</h4>
         <h2>Ismael Morillo</h2>
-        <h3>Me gusta diseñar cosas para la web</h3>
+        <p>Soy un desarrollador web en proceso, <br/> me gusta diseñar y construir cosas en la web.</p>
       </motion.div>
-
       
     </div>
   );

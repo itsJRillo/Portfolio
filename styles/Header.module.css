@@ -22,10 +22,19 @@
   }
 }
 
+.logo {
+  transition-duration: .3s;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  transition-duration: .3s;
+}
+
 @media (min-width: 500px) {
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
   }
 }
 
