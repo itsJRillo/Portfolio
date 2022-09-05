@@ -55,6 +55,7 @@ const AboutMe = () => {
 
             <a>
               <Image
+                
                 layout="responsive"
                 src="/icons/node.png"
                 width={30}
