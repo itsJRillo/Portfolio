@@ -30,7 +30,7 @@
 
 .form input, .form textarea{
   display: block;
-  width: 100%;
+  width: fit-content;
   padding: 2rem;
   background-color: #12171b;
   border-radius: 8px;

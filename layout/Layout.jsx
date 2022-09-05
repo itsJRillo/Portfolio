@@ -14,6 +14,7 @@ const Layout = ({ children, pagina }) => {
           name="description"
           content="Portfolio de Ismael Morillo aka itsJRillo"
         ></meta>
+         <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
       </Head>
 
       <Header />
