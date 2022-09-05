@@ -29,7 +29,8 @@ const Header = () => {
       className={`contenedor ${styles.contenido}`}
     >
       <div className={styles.barra}>
-        <a href="/" className={styles.logo}>
+      <Link href="/">
+        <a className={styles.logo}>
           <Image
             priority
             src="/icons/itsjrillo.gif"
@@ -38,6 +39,7 @@ const Header = () => {
             alt="logo"
           />
         </a>
+      </Link>
 
         <nav className={styles.navegacion}>
           <Link href="/about">Sobre mí</Link>

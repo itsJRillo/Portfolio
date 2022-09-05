@@ -49,6 +49,7 @@ const AboutMe = () => {
                 src="/icons/javascript.png"
                 width={20}
                 height={20}
+                alt="logo javascript"
               />
             </a>
 
@@ -58,6 +59,7 @@ const AboutMe = () => {
                 src="/icons/node.png"
                 width={30}
                 height={30}
+                alt="logo nodejs"
               />
             </a>
             <a>
@@ -66,6 +68,7 @@ const AboutMe = () => {
                 src="/icons/react.png"
                 width={30}
                 height={30}
+                alt="logo react"
               />
             </a>
             <a>
@@ -82,6 +85,7 @@ const AboutMe = () => {
                 src="/icons/java.png"
                 width={30}
                 height={30}
+                alt="logo java"
               />
             </a>
           </div>
@@ -94,6 +98,7 @@ const AboutMe = () => {
             src="/icons/fotoCV.jpg"
             width={50}
             height={50}
+            alt="foto ismael"
           />
         </a>
       </div>
