@@ -78,6 +78,7 @@ const AboutMe = () => {
                 src="/icons/python.png"
                 width={30}
                 height={30}
+                alt="logo python"
               />
             </a>
             <a>
