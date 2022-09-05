@@ -6,7 +6,7 @@ import { PortfolioProvider } from "../context/PortfolioProvider";
 function MyApp({ Component, pageProps }) {
   return (
     <PortfolioProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </PortfolioProvider>
   )
 }

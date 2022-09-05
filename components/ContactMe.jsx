@@ -59,6 +59,7 @@ const ContactMe = () => {
           <div>
             <label>Nombre</label>
             <input
+            className={styles.nombre}
               name="from_name"
               value={toSend.from_name}
               onChange={handleChange}
@@ -92,6 +93,7 @@ const ContactMe = () => {
           <div>
             <label>Mensaje</label>
             <textarea
+              className={styles.mensaje}
               name="message"
               value={toSend.message}
               onChange={handleChange}

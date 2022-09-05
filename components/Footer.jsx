@@ -1,7 +1,6 @@
 import styles from "../styles/Footer.module.css";
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -80,7 +79,7 @@ const Footer = () => {
             <use
               xlinkHref="#gentle-wave"
               x="48"
-              y="3"
+              y="-12"
               fill="rgba(255,255,255,0.5)"
             />
             <use

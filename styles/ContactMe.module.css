@@ -30,7 +30,6 @@
 
 .form input, .form textarea{
   display: block;
-  width: fit-content;
   padding: 2rem;
   background-color: #12171b;
   border-radius: 8px;
@@ -41,7 +40,11 @@
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 1rem;
+  width:fit-content;
 }
+
+.nombre{width:80%}
+.mensaje{width:80%}
 
 
 .info {
