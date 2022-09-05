@@ -18,9 +18,9 @@ const Footer = () => {
           <Link href="https://github.com/itsJRillo">
             <a>
               <Image
-                src="/icons/Github.png"
-                width={30}
-                height={30}
+                src="/icons/github.png"
+                width={40}
+                height={40}
                 alt={`imagen github`}
               />
             </a>
@@ -28,9 +28,9 @@ const Footer = () => {
           <Link href="https://twitter.com/itsJrillo">
             <a>
               <Image
-                src="/icons/Twitter.png"
-                width={50}
-                height={50}
+                src="/icons/twitter.png"
+                width={40}
+                height={40}
                 alt={`imagen twitter`}
               />
             </a>
@@ -38,7 +38,7 @@ const Footer = () => {
           <Link href="https://www.linkedin.com/in/ismael-morillo/">
             <a>
               <Image
-                src="/icons/Linkedin.png"
+                src="/icons/linkedin.png"
                 width={40}
                 height={40}
                 alt={`imagen linkedin`}
@@ -48,7 +48,7 @@ const Footer = () => {
           <Link href="https://www.behance.net/ismaelmorillo">
             <a>
               <Image
-                src="/icons/Behance.png"
+                src="/icons/behance.png"
                 width={40}
                 height={40}
                 alt={`imagen behance`}

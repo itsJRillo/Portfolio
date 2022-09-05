@@ -26,7 +26,7 @@ const AboutMe = () => {
       <hr className={`${styles.centerDiamond} ${styles.hr} `} />
       <h2 className={`heading`}>Sobre mí</h2>
       <div className={styles.parrafo}>
-        <div>
+        <div className={styles.colInfo}>
           <p>
             Hola!! Mi nombre es Ismael y soy un apasionado de todo lo orientado
             a la creación de cosas para la Web. Me inicié en la programación
@@ -41,12 +41,50 @@ const AboutMe = () => {
             <br /> <br />
             Tecnologías con las que estoy trabajando:
           </p>
-          <ul className={styles.techs}>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Next.js</li>
-          </ul>
+
+          <div className={styles.techs}>
+            <a>
+              <Image
+                layout="responsive"
+                src="/icons/javascript.png"
+                width={20}
+                height={20}
+              />
+            </a>
+
+            <a>
+              <Image
+                layout="responsive"
+                src="/icons/node.png"
+                width={30}
+                height={30}
+              />
+            </a>
+            <a>
+              <Image
+                layout="responsive"
+                src="/icons/react.png"
+                width={30}
+                height={30}
+              />
+            </a>
+            <a>
+              <Image
+                layout="responsive"
+                src="/icons/python.png"
+                width={30}
+                height={30}
+              />
+            </a>
+            <a>
+              <Image
+                layout="responsive"
+                src="/icons/java.png"
+                width={30}
+                height={30}
+              />
+            </a>
+          </div>
         </div>
 
         <a className={styles.photo}>

@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   text-align: justify;
+  margin: 3rem;
 }
 
 .parrafo p {
@@ -16,18 +17,20 @@
   margin-left: 1rem;
 }
 
-.techs{
-  display: flex;
-  flex-direction: row;
-  gap:2rem;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+.colInfo{
+  margin: auto 0;
 }
 
-.techs li{
-  list-style-type: square;
-  font-size: 14px;
+.techs{
+  display: grid;
+  grid-template-columns: repeat(5,100px);
+  margin-left: 15%;
+  gap:1rem;
+}
+
+.techs a{
+  width: 50px;
+  height: 50px;
 }
 
 @media (min-width: 768px) {
@@ -36,18 +39,18 @@
   }
   .parrafo p {
     padding: 3rem;
-    margin-left: 14rem;
+    margin-left: 6rem;
   }
-
   .techs{
-    flex-direction: column;
+    grid-template-columns: repeat(2,100px);
+    margin-left: 40%;
   }
 }
 
 
 
 .photo {
-  margin: 0 auto;
+  margin: 5rem auto;
   width: 350px;
   height: 350px;
   --b: 10px; /* control the size */

@@ -1,38 +1,49 @@
-import axios from "axios";
-import { createContext, useState, useEffect } from "react";
+import { createContext, useState} from "react";
+import {send, init} from "emailjs-com";
 
-const PortfolioContext = createContext()
+const PortfolioContext = createContext();
 
-const PortfolioProvider = ({children}) => {
+const PortfolioProvider = ({ children }) => {
+  const [toSend, setToSend] = useState({
+    from_name: "",
+    to_name: "jmorillolabour@gmail",
+    message: "",
+    telf: "",
+    reply_to: "",
+  });
 
-    const [repos, setRepos] = useState({})
+  const onSubmit = (e) => {
+    e.preventDefault();
 
-    const consultarApi = async () => {
-        try {
-            const url = "https://api.github.com/users/itsJRillo/repos"
-            const { data } = await axios(url)
-            setRepos(data)
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    init(process.env.public_key);
 
-    useEffect(() => {
-        consultarApi()
-    }, []);
+    send(process.env.service_id, process.env.template_id, toSend)
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+      });
+    document.getElementById("form").reset()
+  };
 
-    return (
-        <PortfolioContext.Provider 
-        value={{
-            repos
-        }}>
-        {children}
-        </PortfolioContext.Provider>
-    )
-}
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
+  };
 
-export{
-    PortfolioProvider
-}
+  return (
+    <PortfolioContext.Provider
+      value={{
+        onSubmit,
+        handleChange,
+        toSend
+      }}
+    >
+      {children}
+    </PortfolioContext.Provider>
+  );
+};
 
-export default PortfolioContext
+export { PortfolioProvider };
+
+export default PortfolioContext;

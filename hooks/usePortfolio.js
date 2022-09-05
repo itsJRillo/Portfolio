@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import PortfolioContext from "../context/PortfolioProvider";
 
-const useRepo = () =>{
+const usePortfolio = () =>{
     return useContext(PortfolioContext)
 }
 
-export default useRepo;
+export default usePortfolio;

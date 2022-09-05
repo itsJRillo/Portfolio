@@ -165,8 +165,7 @@ const Projects = () => {
               estos a su vez se registrarán en una BBDD de MySQL alojada en la
               nube gracias a Railway, una plataforma para el soporte de
               infraestructuras para su publicación en la nube, en la que también
-              se ha hecho el deployment de la web. Este ejercicio fue
-              realizado en el Curso de React de Juan Pablo de la Torre.
+              se ha hecho el deployment de la web.
             </Typography>
           </CardContent>
           <CardActions>
