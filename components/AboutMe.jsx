@@ -95,7 +95,7 @@ const AboutMe = () => {
           <Image
             priority
             layout="responsive"
-            src="/icons/fotoCV.jpg"
+            src="/icons/fotoCV.png"
             width={50}
             height={50}
             alt="foto ismael"
