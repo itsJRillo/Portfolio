@@ -2,7 +2,9 @@ import styles from "../styles/ContactMe.module.css";
 import Image from "next/image";
 import usePortfolio from "../hooks/usePortfolio";
 
-const ContactMe = ({handleChange, onSubmit, toSend}) => {
+const ContactMe = () => {
+  const {handleChange, onSubmit, toSend} = usePortfolio()
+  
   return (
     <div className={styles.contenido}>
       <hr className={`${styles.centerDiamond} ${styles.hr} `} />
