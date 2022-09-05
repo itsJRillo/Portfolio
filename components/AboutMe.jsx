@@ -93,12 +93,12 @@ const AboutMe = () => {
 
         <a className={styles.photo}>
           <Image
-            priority
             layout="responsive"
-            src="/icons/fotoCV.png"
+            src="/icons/foto.png"
             width={50}
             height={50}
             alt="foto ismael"
+            priority
           />
         </a>
       </div>
