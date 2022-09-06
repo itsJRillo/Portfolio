@@ -28,12 +28,6 @@ body {
   overflow-x: hidden;
 }
 
-body::after {
-  content: "";
-  display: block;
-  height: 60rem;
-}
-
 [class*="contenedor"] {
   max-width: 120rem;
   margin: 0 auto;
