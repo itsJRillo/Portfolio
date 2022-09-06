@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Header = () => {
   const openResume = () => {
-    window.open("CV-Ismael Morillo.pdf");
+    window.open("CV-Ismael Morillo-Ingles.pdf");
   };
 
   return (
