@@ -12,12 +12,12 @@ const PortfolioProvider = ({ children }) => {
     reply_to: "",
   });
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) =>  {
     e.preventDefault();
 
-    init(process.env.PUBLIC_KEY);
+    await init(process.env.PUBLIC_KEY);
 
-    send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, toSend)
+    await send(process.env.SERVICE_ID, process.env.TEMPLATE_ID, toSend)
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
         setTimeout(() => {
@@ -25,7 +25,7 @@ const PortfolioProvider = ({ children }) => {
           toSend.message = "";
           toSend.telf = "";
           toSend.reply_to = "";
-        }, 2000);
+        }, 500);
       })
       .catch((err) => {
         console.log("FAILED...", err);

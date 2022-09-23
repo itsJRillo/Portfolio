@@ -4,48 +4,16 @@
 }
 
 .contactUs {
-    display: flex;
-    gap: 4rem;
-    justify-content: center;
-    flex-direction: column;
-    
-}
-
-@media (min-width:768px){
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    margin: 0 auto;
+  }
+  
+  @media (min-width:768px){
     .contactUs{
-    flex-direction: row;
+      grid-template-columns: repeat(2,1fr);
     }
 }
-
-.form{
-    display: flex;
-    flex-direction: column;
-}
-
-.form div{
-  margin: 2rem;
-}
-
-
-.form input, .form textarea{
-  display: block;
-  padding: 2rem;
-  background-color: #12171b;
-  border-radius: 8px;
-  color: #e3e4ca;
-  margin: 0 auto;
-}
-
-.infoUser{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  gap: 1rem;
-  width:fit-content;
-}
-
-.nombre{width:80%}
-.mensaje{width:80%}
-
 
 .info {
   background-color: #12171b;
@@ -84,6 +52,36 @@
 
 .info span div p{
   margin: 0 auto;
+}
+
+.form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    width: 45rem;
+}
+
+.form > *{
+  margin: auto 0;
+}
+
+/*
+.form div{
+  margin: 2rem;
+}
+*/
+
+
+.form input, .form textarea{
+  display: block;
+  overflow:hidden;
+  width: 100%;
+  padding: 2rem;
+  background-color: #12171b;
+  border-radius: 8px;
+  color: #e3e4ca;
+  margin-bottom: 1rem;
 }
 
 .send {

@@ -1,10 +1,13 @@
 import styles from "../styles/ContactMe.module.css";
 import Image from "next/image";
 import usePortfolio from "../hooks/usePortfolio";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactMe = () => {
-  const {handleChange, onSubmit, toSend} = usePortfolio()
-  
+  const { handleChange, onSubmit, toSend } = usePortfolio();
+  const notify = () => toast("Mensaje enviado correctamente");
+
   return (
     <div className={styles.contenido}>
       <hr className={`${styles.centerDiamond} ${styles.hr} `} />
@@ -60,7 +63,7 @@ const ContactMe = () => {
           <div>
             <label>Nombre</label>
             <input
-            className={styles.nombre}
+              className={styles.nombre}
               name="from_name"
               value={toSend.from_name}
               onChange={handleChange}
@@ -72,7 +75,6 @@ const ContactMe = () => {
 
           <div className={styles.infoUser}>
             <label>E-mail</label>
-            <label>Teléfono</label>
             <input
               name="reply_to"
               value={toSend.reply_to}
@@ -81,6 +83,9 @@ const ContactMe = () => {
               placeholder="email@email.com"
               required
             />
+          </div>
+          <div>
+            <label>Teléfono</label>
             <input
               name="telf"
               value={toSend.telf}
@@ -103,9 +108,10 @@ const ContactMe = () => {
             />
           </div>
 
-          <button type="submit" className={styles.send}>
+          <button type="submit" onClick={notify} className={styles.send}>
             Enviar Mensaje
           </button>
+          <ToastContainer/>
         </form>
       </div>
     </div>

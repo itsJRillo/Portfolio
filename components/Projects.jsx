@@ -6,6 +6,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Link } from "@mui/material";
 
 const Projects = () => {
   return (
@@ -142,9 +143,9 @@ const Projects = () => {
         <Card sx={{ maxWidth: 345 }}>
           <CardMedia
             component="img"
-            alt="pagina web quiosco"
+            alt="pagina web guitarla"
             height="140"
-            image="/icons/quiosco.png"
+            image="/icons/guitar.png"
           />
           <CardContent>
             <Typography
@@ -153,25 +154,24 @@ const Projects = () => {
               variant="h5"
               component="div"
             >
-              Web Quiosco
+              Web Guitarras
             </Typography>
             <Typography
               fontFamily={"Josefin Sans"}
               variant="body2"
               color="text.secondary"
             >
-              Página hecha con React, Next.js y Node.js. En está página
-              simularemos un pequeño quiosco en el que se podrán hacer pedidos y
-              estos a su vez se registrarán en una BBDD de MySQL alojada en la
-              nube gracias a Railway, una plataforma para el soporte de
-              infraestructuras para su publicación en la nube, en la que también
-              se ha hecho el deployment de la web.
+              Página hecha con React, Next.js y Node.js. Esta página fue creada en el{" "}
+              <Link target="_blank" href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/">
+                <b>curso de React de Juan Pablo</b>
+              </Link> , es un sitio de venta de guitarras con sus propios blogs y sistema de carrito.
+              
             </Typography>
           </CardContent>
           <CardActions>
             <Button
               target="_blank"
-              href="https://github.com/itsJRillo-CursoReact/QuioscoApp"
+              href="https://github.com/itsJRillo-CursoReact/GuitarLA"
               variant="contained"
               size="small"
             >
@@ -179,7 +179,7 @@ const Projects = () => {
             </Button>
             <Button
               target="_blank"
-              href="https://itsjrillo-quioscoapp.up.railway.app/"
+              href="https://itsjrillo-guitarla.vercel.app/"
               variant="contained"
               size="small"
             >
