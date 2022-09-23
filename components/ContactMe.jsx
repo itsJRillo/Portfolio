@@ -1,11 +1,51 @@
 import styles from "../styles/ContactMe.module.css";
 import Image from "next/image";
-import usePortfolio from "../hooks/usePortfolio";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useState } from "react";
 
 const ContactMe = () => {
-  const { handleChange, onSubmit, toSend } = usePortfolio();
+  const [nombre, setNombre] = useState("");
+  const [mail, setMail] = useState("");
+  const [telefono, setTelefono] = useState(0);
+  const [mensaje, setMensaje] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const cleanInputs = () => {
+    setTimeout(() => {
+      setNombre("");
+      setMail("");
+      setTelefono(0);
+      setMensaje("");
+      setSubmitted(true);
+    }, 1000);
+  };
+
+  const onSubmit = async (e) => {
+    e.preventDefault();
+
+    let data = {
+      nombre,
+      mail,
+      telefono,
+      mensaje,
+    };
+
+    fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        Accept: "application/json, text/plain, */*",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    }).then((res) => {
+      console.log("Response received");
+      if (res.status === 200) {
+        console.log("Response succeeded!");
+      }
+    });
+  };
+
   const notify = () => toast("Mensaje enviado correctamente");
 
   return (
@@ -59,14 +99,16 @@ const ContactMe = () => {
           </span>
         </div>
 
-        <form id="form" onSubmit={onSubmit} className={styles.form}>
+        <form id="form" className={styles.form}>
           <div>
             <label>Nombre</label>
             <input
               className={styles.nombre}
-              name="from_name"
-              value={toSend.from_name}
-              onChange={handleChange}
+              name="nombre"
+              value={nombre}
+              onChange={(e) => {
+                setNombre(e.target.value);
+              }}
               type="text"
               placeholder="John Doe"
               required
@@ -76,9 +118,11 @@ const ContactMe = () => {
           <div className={styles.infoUser}>
             <label>E-mail</label>
             <input
-              name="reply_to"
-              value={toSend.reply_to}
-              onChange={handleChange}
+              name="email"
+              value={mail}
+              onChange={(e) => {
+                setMail(e.target.value);
+              }}
               type="email"
               placeholder="email@email.com"
               required
@@ -87,11 +131,13 @@ const ContactMe = () => {
           <div>
             <label>Teléfono</label>
             <input
-              name="telf"
-              value={toSend.telf}
-              onChange={handleChange}
+              name="telefono"
+              value={telefono}
+              onChange={(e) => {
+                setTelefono(e.target.value);
+              }}
               type="tel"
-              placeholder=""
+              placeholder="600 000 000"
               required
             />
           </div>
@@ -100,18 +146,34 @@ const ContactMe = () => {
             <label>Mensaje</label>
             <textarea
               className={styles.mensaje}
-              name="message"
-              value={toSend.message}
-              onChange={handleChange}
+              name="mensaje"
+              value={mensaje}
+              onChange={(e) => {
+                setMensaje(e.target.value);
+              }}
               placeholder="Escribe tu mensaje..."
               required
             />
           </div>
 
-          <button type="submit" onClick={notify} className={styles.send}>
+          <button
+            type="submit"
+            onClick={(e) => {
+              onSubmit(e);
+              notify();
+              cleanInputs();
+            }}
+            className={styles.send}
+          >
             Enviar Mensaje
           </button>
-          <ToastContainer/>
+
+          {nombre === "" ||
+          mail === "" ||
+          telefono === null ||
+          mensaje === "" ? null : (
+            <ToastContainer />
+          )}
         </form>
       </div>
     </div>
