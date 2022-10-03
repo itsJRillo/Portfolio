@@ -1,8 +1,8 @@
-export default function (req, res) {
-  require("dotenv").config();
+export default async function (req, res) {
+  await require("dotenv").config();
 
   let nodemailer = require("nodemailer");
-  const transporter = nodemailer.createTransport({
+  const transporter = await nodemailer.createTransport({
     port: 25,
     host: "smtp.gmail.com",
     auth: {
@@ -23,10 +23,8 @@ export default function (req, res) {
     html: `<div>${req.body.mensaje}</div><p>Sent from:
     ${req.body.mail} | Contact Number: ${req.body.telefono}</p>`
   }
-  
-  res.status(200)
 
-  transporter.sendMail(mailData, function (err, info) {
+  await transporter.sendMail(mailData, function (err, info) {
     if(err)
       console.log(err)
     else

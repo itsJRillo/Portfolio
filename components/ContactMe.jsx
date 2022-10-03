@@ -18,7 +18,7 @@ const ContactMe = () => {
       setTelefono(0);
       setMensaje("");
       setSubmitted(true);
-    }, 1000);
+    }, 3000);
   };
 
   const onSubmit = async (e) => {
@@ -31,7 +31,7 @@ const ContactMe = () => {
       mensaje,
     };
 
-    fetch("/api/contact", {
+    await fetch("/api/contact", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -46,7 +46,7 @@ const ContactMe = () => {
     });
   };
 
-  const notify = () => toast("Mensaje enviado correctamente");
+  const notify = () => toast("Mensaje enviado");
 
   return (
     <div className={styles.contenido}>
