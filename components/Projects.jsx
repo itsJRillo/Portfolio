@@ -96,14 +96,14 @@ const Projects = () => {
             <CardActions>
               <ColorButton
                 target="_blank"
-                href="http://github.com/itsJRillo/TrashTaste-React"
+                href="https://github.com/itsJRillo/TablaPeriodica"
                 variant="contained"
               >
                 Go to Github
               </ColorButton>
               <ColorButton
                 target="_blank"
-                href="https://trash-taste-podcast.netlify.app/"
+                href="https://itsjrillo-periodictable.netlify.app"
                 variant="contained"
               >
                 Go to Website
@@ -143,14 +143,14 @@ const Projects = () => {
             <CardActions>
               <ColorButton
                 target="_blank"
-                href="https://github.com/itsJRillo/Fighting-Game"
+                href="https://github.com/itsJRillo/TrashTaste-React"
                 variant="contained"
               >
                 Go to Github
               </ColorButton>
               <ColorButton
                 target="_blank"
-                href="https://itsjrillo-fightinggame.netlify.app/"
+                href="https://trash-taste-podcast.netlify.app"
                 variant="contained"
               >
                 Go to Website
