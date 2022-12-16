@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "cypress": "cypress open"
   },
   "dependencies": {
     "@emotion/react": "^11.10.4",
@@ -30,6 +31,7 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
+    "cypress": "^12.1.0",
     "eslint": "8.22.0",
     "eslint-config-next": "12.2.5",
     "next-transpile-modules": "^9.0.0"
