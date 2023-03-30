@@ -201,13 +201,6 @@ const Projects = () => {
               >
                 Go to Github
               </ColorButton>
-              <ColorButton
-                target="_blank"
-                href="https://itsjrillo-guitarla.vercel.app/"
-                variant="contained"
-              >
-                Go to Website
-              </ColorButton>
             </CardActions>
           </Card>
         </div>
