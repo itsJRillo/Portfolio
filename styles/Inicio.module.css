@@ -5,16 +5,6 @@
     justify-content: space-evenly
 }
 
-/*
-@media (min-width:992px) {
-    .inicio{
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-}
-*/
-
 .inicio h5{
     color: #0c1013;
 }

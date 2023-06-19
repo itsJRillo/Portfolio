@@ -6,51 +6,55 @@ const Footer = () => {
   return (
     <div className={styles.footer}>
       <div>
-        <hr className={`${styles.centerDiamond} ${styles.hr} `}/>
+        <hr className={`${styles.centerDiamond} ${styles.hr}`} />
         <p className={styles.built}>
-          <a href="https://github.com/itsJRillo/Portfolio">
+          <a
+            href="https://github.com/itsJRillo/Portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Built and Designed by Ismael Morillo
           </a>
         </p>
 
         <div className={styles.socials}>
           <Link href="https://github.com/itsJRillo">
-            <a>
+            <a target="_blank" rel="noopener noreferrer">
               <Image
                 src="/icons/github.png"
                 width={40}
                 height={40}
-                alt={`imagen github`}
+                alt="imagen github"
               />
             </a>
           </Link>
           <Link href="https://twitter.com/itsJrillo">
-            <a>
+            <a target="_blank" rel="noopener noreferrer">
               <Image
                 src="/icons/twitter.png"
                 width={40}
                 height={40}
-                alt={`imagen twitter`}
+                alt="imagen twitter"
               />
             </a>
           </Link>
           <Link href="https://www.linkedin.com/in/ismael-morillo/">
-            <a>
+            <a target="_blank" rel="noopener noreferrer">
               <Image
                 src="/icons/linkedin.png"
                 width={40}
                 height={40}
-                alt={`imagen linkedin`}
+                alt="imagen linkedin"
               />
             </a>
           </Link>
           <Link href="https://www.behance.net/ismaelmorillo">
-            <a>
+            <a target="_blank" rel="noopener noreferrer">
               <Image
                 src="/icons/behance.png"
                 width={40}
                 height={40}
-                alt={`imagen behance`}
+                alt="imagen behance"
               />
             </a>
           </Link>
@@ -74,7 +78,7 @@ const Footer = () => {
               xlinkHref="#gentle-wave"
               x="48"
               y="0"
-              fill="rgba(255,255,255,0.7"
+              fill="rgba(255,255,255,0.7)"
             />
             <use
               xlinkHref="#gentle-wave"
@@ -92,8 +96,6 @@ const Footer = () => {
           </g>
         </svg>
       </div>
-
-      
     </div>
   );
 };

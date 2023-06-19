@@ -52,21 +52,20 @@ const ContactMe = () => {
     <div className={styles.contenido}>
       <hr className={`${styles.centerDiamond} ${styles.hr} `} />
       <h2 className="heading">Contáctame</h2>
-      <p>Si tienes cualquier duda o pregunta solo enviame un mensaje!</p>
+      <p className={styles.textInfo}>Si tienes cualquier duda o pregunta solo enviame un mensaje!</p>
       <div className={styles.contactUs}>
         <div className={styles.info}>
           <h2>Información de contacto</h2>
           <p>Rellena el formulario y me pondré en contacto lo antes posible</p>
 
-          <span>
+          <div className={styles.contact}>
             <div>
               <a>
-                <Image
-                  layout="responsive"
+                <img
                   src="/icons/phone.png"
                   width={40}
                   height={40}
-                  alt={`logo phone`}
+                  alt="logo phone"
                 />
               </a>
               <p>+34 62 30 45 380</p>
@@ -74,29 +73,27 @@ const ContactMe = () => {
 
             <div>
               <a>
-                <Image
-                  layout="responsive"
+                <img
                   src="/icons/mail.png"
                   width={40}
                   height={40}
-                  alt={`logo mail`}
+                  alt="logo mail"
                 />
               </a>
               <p>jmorillolabour@gmail.com</p>
             </div>
             <div>
               <a>
-                <Image
-                  layout="responsive"
+                <img
                   src="/icons/map pin.png"
                   width={40}
                   height={40}
-                  alt={`logo map pin`}
+                  alt="logo map pin"
                 />
               </a>
               <p>Barcelona, España</p>
             </div>
-          </span>
+          </div>
         </div>
 
         <form id="form" className={styles.form}>

@@ -23,8 +23,8 @@ const AboutMe = () => {
       }}
       className={`${styles.contenido}`}
     >
-      <hr className={`${styles.centerDiamond} ${styles.hr} `} />
-      <h2 className={`heading`}>Sobre mí</h2>
+      <hr className={`${styles.centerDiamond} ${styles.hr}`} />
+      <h2 className="heading">Sobre mí</h2>
       <div className={styles.parrafo}>
         <div className={styles.colInfo}>
           <p>
@@ -32,7 +32,7 @@ const AboutMe = () => {
             a la creación de cosas para la Web. Me inicié en la programación
             allá por el 2015 con Lua como mi primer lenguaje, pero en aquel
             momento no podía centrarme a pleno en ello debido a mis otros
-            estudios. En 2018 - 2020 puede centrarme un poco más y estudié
+            estudios. En 2018 - 2020 pude centrarme un poco más y estudié
             lenguajes tales como Python, Dart y empecé con HTML y CSS.
             <br /> <br />
             En la actualidad, sigo aprendiendo y desarrollando mis habilidades
@@ -55,7 +55,6 @@ const AboutMe = () => {
 
             <a>
               <Image
-                
                 layout="responsive"
                 src="/icons/node.png"
                 width={30}

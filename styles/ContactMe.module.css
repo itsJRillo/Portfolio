@@ -1,18 +1,33 @@
-.contenido p{
+.contenido p {
   text-align: center;
   margin-bottom: 5rem;
 }
 
+.textInfo{
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
+}
+
 .contactUs {
-    display:grid;
-    grid-template-rows: repeat(1,1fr);
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactUs > * {
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .contactUs {
+    flex-direction: row;
   }
-  
-  @media (min-width:768px){
-    .contactUs{
-      grid-template-columns: repeat(2,1fr);
-    }
+
+  .contactUs > * {
+    margin: 0 2rem;
+    margin-top: 0;
+  }
 }
 
 .info {
@@ -20,24 +35,40 @@
   border-radius: 20px;
   color: #e3e4ca;
   padding: 2rem;
-  margin: 0 auto;
 }
 
-.info h2{
-  color: #FFDE59
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.info p{
-  color: #e3e4ca
+.contact div {
+  display: flex;
+  margin-right: 20px;
 }
 
-.info span{
+.contact p {
+  margin-left: 10px;
+}
+
+.info h2 {
+  color: #ffde59;
+  text-align: center;
+}
+
+.info p {
+  color: #e3e4ca;
+  font-weight: 700;
+}
+
+.info span {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
 }
 
-.info span div{
+.info span div {
   display: flex;
   flex-direction: row;
   gap: 2rem;
@@ -45,37 +76,31 @@
   text-align: left;
 }
 
-.info span div a{
+.info span div a {
   width: 50px;
   height: 50px;
 }
 
-.info span div p{
+.info span div p {
   margin: 0 auto;
 }
 
-.form{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 1rem;
-    width: 45rem;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 45rem;
 }
 
-.form > *{
+.form > * {
   margin: auto 0;
 }
 
-/*
-.form div{
-  margin: 2rem;
-}
-*/
-
-
-.form input, .form textarea{
+.form input,
+.form textarea {
   display: block;
-  overflow:hidden;
+  overflow: hidden;
   width: 100%;
   padding: 2rem;
   background-color: #12171b;

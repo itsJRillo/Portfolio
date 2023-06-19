@@ -13,22 +13,24 @@
 }
 
 .parrafo p {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
   padding: 1.5rem;
   margin-left: 1rem;
 }
 
-.colInfo{
+.colInfo {
   margin: auto 0;
 }
 
-.techs{
+.techs {
   display: grid;
-  grid-template-columns: repeat(5,100px);
+  grid-template-columns: repeat(5, 100px);
   margin-left: 15%;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.techs a{
+.techs a {
   width: 50px;
   height: 50px;
 }
@@ -37,16 +39,17 @@
   .parrafo {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .parrafo p {
     padding: 3rem;
     margin-left: 6rem;
   }
-  .techs{
-    grid-template-columns: repeat(2,100px);
+
+  .techs {
+    grid-template-columns: repeat(2, 100px);
     margin-left: 40%;
   }
 }
-
 
 
 .photo {
