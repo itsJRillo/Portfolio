@@ -1,8 +1,10 @@
-import styles from "../styles/ContactMe.module.css";
-import Image from "next/image";
+import { useState } from "react";
+import axios from "axios";
+
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useState } from "react";
+
+import styles from "../styles/ContactMe.module.css";
 
 const ContactMe = () => {
   const [nombre, setNombre] = useState("");
@@ -24,35 +26,45 @@ const ContactMe = () => {
   const onSubmit = async (e) => {
     e.preventDefault();
 
-    let data = {
+    if (!nombre || !mail || !telefono || !mensaje) {
+      return;
+    }
+
+    const data = {
       nombre,
       mail,
       telefono,
       mensaje,
     };
 
-    await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        Accept: "application/json, text/plain, */*",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then((res) => {
+    try {
+      const response = await axios.post("/api/contact", data);
       console.log("Response received");
-      if (res.status === 200) {
+
+      if (response.status === 200) {
         console.log("Response succeeded!");
+        cleanInputs();
+        notify("Mensaje enviado exitosamente", "success");
+      } else {
+        notify("Error al enviar el mensaje", "error");
       }
-    });
+    } catch (error) {
+      console.error("Error al enviar el mensaje", error);
+      notify("Error al enviar el mensaje", "error");
+    }
   };
 
-  const notify = () => toast("Mensaje enviado");
+  const notify = (message, type) => {
+    toast(message, { type });
+  };
 
   return (
     <div className={styles.contenido}>
       <hr className={`${styles.centerDiamond} ${styles.hr} `} />
       <h2 className="heading">Contáctame</h2>
-      <p className={styles.textInfo}>Si tienes cualquier duda o pregunta solo enviame un mensaje!</p>
+      <p className={styles.textInfo}>
+        Si tienes cualquier duda o pregunta solo enviame un mensaje!
+      </p>
       <div className={styles.contactUs}>
         <div className={styles.info}>
           <h2>Información de contacto</h2>
@@ -103,9 +115,7 @@ const ContactMe = () => {
               className={styles.nombre}
               name="nombre"
               value={nombre}
-              onChange={(e) => {
-                setNombre(e.target.value);
-              }}
+              onChange={(e) => setNombre(e.target.value)}
               type="text"
               placeholder="John Doe"
               required
@@ -117,9 +127,7 @@ const ContactMe = () => {
             <input
               name="email"
               value={mail}
-              onChange={(e) => {
-                setMail(e.target.value);
-              }}
+              onChange={(e) => setMail(e.target.value)}
               type="email"
               placeholder="email@email.com"
               required
@@ -130,9 +138,7 @@ const ContactMe = () => {
             <input
               name="telefono"
               value={telefono}
-              onChange={(e) => {
-                setTelefono(e.target.value);
-              }}
+              onChange={(e) => setTelefono(e.target.value)}
               type="tel"
               placeholder="600 000 000"
               required
@@ -145,32 +151,17 @@ const ContactMe = () => {
               className={styles.mensaje}
               name="mensaje"
               value={mensaje}
-              onChange={(e) => {
-                setMensaje(e.target.value);
-              }}
+              onChange={(e) => setMensaje(e.target.value)}
               placeholder="Escribe tu mensaje..."
               required
             />
           </div>
 
-          <button
-            type="submit"
-            onClick={(e) => {
-              onSubmit(e);
-              notify();
-              cleanInputs();
-            }}
-            className={styles.send}
-          >
+          <button type="submit" onClick={onSubmit} className={styles.send}>
             Enviar Mensaje
           </button>
 
-          {nombre === "" ||
-          mail === "" ||
-          telefono === null ||
-          mensaje === "" ? null : (
-            <ToastContainer />
-          )}
+          <ToastContainer />
         </form>
       </div>
     </div>

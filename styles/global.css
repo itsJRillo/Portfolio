@@ -28,6 +28,10 @@ body {
   overflow-x: hidden;
 }
 
+html, body{
+  overflow-x: hidden;
+}
+
 [class*="contenedor"] {
   max-width: 120rem;
   margin: 0 auto;

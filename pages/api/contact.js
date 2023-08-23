@@ -6,7 +6,7 @@ export default async function (req, res) {
     port: 25,
     host: "smtp.gmail.com",
     auth: {
-      user: "itsjrillo@gmail.com",
+      user: "jmorillolabour@gmail.com",
       pass: process.env.password
     },
     secure: false,
@@ -17,7 +17,7 @@ export default async function (req, res) {
 
   const mailData = {
     from: req.body.mail,
-    to: 'itsjrillo@gmail.com',
+    to: 'jmorillolabour@gmail.com',
     subject: `Message From ${req.body.nombre}`,
     text: req.body.mensaje + " | Sent from: " + req.body.mail + " | Contact Number: " + req.body.telefono,
     html: `<div>${req.body.mensaje}</div><p>Sent from:
