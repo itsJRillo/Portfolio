@@ -1,6 +1,6 @@
 # Portfolio Website
 
-Welcome to my portfolio repository! This is the GitHub repository for my personal portfolio website. The purpose of this website is to showcase my projects, skills, and experiences as a [Your Profession or Field]. 
+Welcome to my portfolio repository! This is the GitHub repository for my personal portfolio website. The purpose of this website is to showcase my projects, skills, and experiences as a Front-end Developer. 
 
 ## Website Overview
 
