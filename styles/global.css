@@ -11,38 +11,22 @@ Background: #e3e4ca
 html {
   font-size: 62.5%;
   background-color:  #e3e4ca;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
+  overflow-x: hidden;
 }
 
 body {
   font-size: 2rem;
   font-family: 'Josefin Sans', sans-serif;
   line-height: 1.5;
-  min-height: 100vh;
-  margin: 0;
   position: relative;
   overflow-x: hidden;
-}
-
-html, body{
-  overflow-x: hidden;
-}
-
-[class*="contenedor"] {
-  max-width: 120rem;
-  margin: 0 auto;
-  width: 95%;
 }
 
 [class*="heading"] {
   font-size: 4rem;
   text-align: center;
   font-weight: 900;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 

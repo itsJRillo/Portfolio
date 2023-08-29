@@ -1,6 +1,5 @@
 .contenido {
   padding: 4rem;
-  margin: 0 auto;
 }
 
 .titulo {
@@ -31,7 +30,7 @@
   transition-duration: .3s;
 }
 
-@media (min-width: 500px) {
+@media (max-width: 500px) {
   .logo {
     width: 150px;
     height: 150px;
@@ -54,12 +53,19 @@
   }
 }
 
+@media (max-width: 500px) {
+  .navegacion {
+    gap: 1rem;
+  }
+}
+
 .navegacion a {
   color: #12171b;
   text-decoration: none;
   font-size: 1.4rem;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   padding: 10px;
   transition-duration: 0.3s;
   animation: boot 3s;
@@ -87,15 +93,20 @@
   transition: transform .3s ease;
 }
 
-
+@media (max-width: 500px) {
+  .navegacion a{
+    font-size: 10px;
+  }
+}
 
 .navegacion button {
   all: unset;
   font-size: 1.4rem;
   text-transform: uppercase;
+  text-align: center;
   color: #12171b;
   border: 1px solid #12171b;
-  padding: 5px;
+  padding: 3px;
   font-weight: bolder;
   transition-property: color;
   transition-duration: 0.3s;
@@ -106,6 +117,12 @@
   color: #e3e4ca;
   background-color: #12171b;
   padding: 5px;
+}
+
+@media (max-width: 500px) {
+  .navegacion button{
+    font-size: 10px;
+  }
 }
 
 @keyframes boot {

@@ -203,6 +203,50 @@ const Projects = () => {
               </ColorButton>
             </CardActions>
           </Card>
+
+          <Card sx={{ maxWidth: 500 }}>
+            <CardMedia
+              component="img"
+              alt="pagina web shoten"
+              height={300}
+              image="/icons/shoten.png"
+            />
+            <CardContent>
+              <Typography
+                fontFamily={"Josefin Sans"}
+                fontSize={16}
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
+                SHOTEN - Movie and Series Catalog
+              </Typography>
+              <Typography
+                fontFamily={"Josefin Sans"}
+                fontSize={18}
+                variant="body2"
+                color="text.secondary"
+              >
+                Página hecha con React y TypeScript, con un backend y API creados con PocketBase y E2E-testing en deploy con Netlify y Cypress
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <ColorButton
+                target="_blank"
+                href="https://github.com/itsJRillo/Shoten"
+                variant="contained"
+              >
+                Go to Github
+              </ColorButton>
+              <ColorButton
+                target="_blank"
+                href="https://shoten-itsjrillo.netlify.app"
+                variant="contained"
+              >
+                Go to Website
+              </ColorButton>
+            </CardActions>
+          </Card>
         </div>
       </motion.div>
     </motion.div>
