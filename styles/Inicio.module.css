@@ -2,7 +2,7 @@
     display:flex;
     color: #12171B;
     align-items: center;
-    justify-content: space-evenly
+    justify-content: space-around
 }
 
 .inicio h5{
@@ -26,10 +26,27 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 600px){
+  .inicio{
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .texto h2{
+    text-align: center;
+    font-size: 40px;
+    margin: 0 auto;
+  }
+
+  .texto p{
+    font-size: 16px;
+  }
+}
+
 @keyframes typing{
   from {width: 0}
 }
 
 @keyframes blink {
-  50% {border-color: transparent}
+  65% {border-color: transparent}
 }

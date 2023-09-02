@@ -23,6 +23,8 @@ const Projects = () => {
     },
   }));
 
+  const maxWidth = 500;
+
   return (
     <motion.div
       className={styles.contenido}
@@ -64,7 +66,7 @@ const Projects = () => {
         className={styles.cardHolder}
       >
         <div className={styles.cards}>
-          <Card sx={{ maxWidth: 500 }}>
+          <Card sx={{ maxWidth: maxWidth }}>
             <CardMedia
               component="img"
               alt="pagina web tabla"
@@ -111,7 +113,7 @@ const Projects = () => {
             </CardActions>
           </Card>
 
-          <Card sx={{ maxWidth: 500 }}>
+          <Card sx={{ maxWidth: maxWidth }}>
             <CardMedia
               component="img"
               alt="pagina web trash-taste"
@@ -158,7 +160,7 @@ const Projects = () => {
             </CardActions>
           </Card>
 
-          <Card sx={{ maxWidth: 500 }}>
+          <Card sx={{ maxWidth: maxWidth }}>
             <CardMedia
               component="img"
               alt="pagina web guitarla"
@@ -204,7 +206,7 @@ const Projects = () => {
             </CardActions>
           </Card>
 
-          <Card sx={{ maxWidth: 500 }}>
+          <Card sx={{ maxWidth: maxWidth }}>
             <CardMedia
               component="img"
               alt="pagina web shoten"

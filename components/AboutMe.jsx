@@ -5,24 +5,7 @@ import { motion } from "framer-motion";
 
 const AboutMe = () => {
   return (
-    <motion.div
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: {
-          scale: 0.8,
-          opacity: 0,
-        },
-        visible: {
-          scale: 1,
-          opacity: 1,
-          transition: {
-            delay: 0.2,
-          },
-        },
-      }}
-      className={`${styles.contenido}`}
-    >
+    <div className={`${styles.contenido}`} >
       <hr className={`${styles.centerDiamond} ${styles.hr}`} />
       <h2 className="heading">Sobre mí</h2>
       <div className={styles.parrafo}>
@@ -92,18 +75,19 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <a className={styles.photo}>
+        <a className={styles.photoFrame}>
           <Image
+            className={styles.photo}
             layout="responsive"
             src="/icons/foto.png"
-            width={50}
-            height={50}
+            width={40}
+            height={40}
             alt="foto ismael"
             priority
           />
         </a>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

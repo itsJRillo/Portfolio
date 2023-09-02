@@ -3,31 +3,20 @@
   margin-bottom: 5rem;
 }
 
-.textInfo{
+.textInfo {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
 }
 
+/* Contact section */
 .contactUs {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .contactUs > * {
-  margin-top: 4rem;
-}
-
-@media (min-width: 768px) {
-  .contactUs {
-    flex-direction: row;
-  }
-
-  .contactUs > * {
-    margin: 0 2rem;
-    margin-top: 0;
-  }
+  margin-top: 2rem;
 }
 
 .info {
@@ -35,26 +24,11 @@
   border-radius: 20px;
   color: #e3e4ca;
   padding: 2rem;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.contact div {
-  display: flex;
-  margin-right: 20px;
-}
-
-.contact p {
-  margin-left: 10px;
+  text-align: center;
 }
 
 .info h2 {
   color: #ffde59;
-  text-align: center;
 }
 
 .info p {
@@ -66,6 +40,7 @@
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  align-items: center;
 }
 
 .info span div {
@@ -81,51 +56,70 @@
   height: 50px;
 }
 
-.info span div p {
-  margin: 0 auto;
-}
-
+/* Form section */
 .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem;
-  width: 45rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 45rem;
+  margin: 2rem;
 }
 
 .form > * {
-  margin: auto 0;
+  margin: 1rem 0;
 }
 
 .form input,
 .form textarea {
   display: block;
-  overflow: hidden;
-  width: 100%;
   padding: 2rem;
+  width: 100%;
   background-color: #12171b;
   border-radius: 8px;
   color: #e3e4ca;
   margin-bottom: 1rem;
+  border: none;
+  outline: none;
 }
 
+/* Send button styles */
 .send {
   all: unset;
   margin-top: 2rem;
   padding: 10px;
-  color: #12171b;
-  border: 1px solid #12171b;
+  color: #e3e4ca;
+  background-color: #12171b;
+  border: 1px solid #e3e4ca;
   text-transform: uppercase;
   text-align: center;
   font-weight: bold;
-  font-size: large;
+  font-size: larger;
   transition-duration: 0.3s;
+  cursor: pointer;
 }
 
 .send:hover {
-  background-color: #12171b;
-  color: #e3e4ca;
-  cursor: pointer;
+  background-color: #e3e4ca;
+  color: #12171b;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .contactUs {
+    flex-direction: column;
+    margin: 1rem;
+    overflow-x: hidden;
+  }
+
+  .contactUs > * {
+    margin: 1rem 0;
+  }
+
+  .form {
+    max-width: none;
+  }
 }
 
 .hr {
@@ -152,6 +146,6 @@
   left: 50%;
   margin: 0 0 0 -3px;
   transform: rotate(45deg);
-  -ms-transform: rotate(45deg); /* IE 9 */
-  -webkit-transform: rotate(45deg); /* Opera, Chrome, and Safari */
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
