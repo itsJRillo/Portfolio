@@ -249,6 +249,50 @@ const Projects = () => {
               </ColorButton>
             </CardActions>
           </Card>
+          
+          <Card sx={{ maxWidth: maxWidth }}>
+            <CardMedia
+              component="img"
+              alt="pagina web weblify"
+              height={300}
+              image="/icons/weblify.png"
+            />
+            <CardContent>
+              <Typography
+                fontFamily={"Josefin Sans"}
+                fontSize={16}
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
+                Weblify
+              </Typography>
+              <Typography
+                fontFamily={"Josefin Sans"}
+                fontSize={18}
+                variant="body2"
+                color="text.secondary"
+              >
+                Esta página web está desarrollada en Next.js, y facilita a los usuarios el acceso a un formulario alojado en Typeform. Este formulario está vinculado a una base de datos en Supabase mediante Webhooks, posibilita la actualización en tiempo real de la página con las respuestas de los usuarios.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <ColorButton
+                target="_blank"
+                href="https://github.com/itsJRillo/Weblify"
+                variant="contained"
+              >
+                Go to Github
+              </ColorButton>
+              <ColorButton
+                target="_blank"
+                href="https://weblify.vercel.app"
+                variant="contained"
+              >
+                Go to Website
+              </ColorButton>
+            </CardActions>
+          </Card>
         </div>
       </motion.div>
     </motion.div>
