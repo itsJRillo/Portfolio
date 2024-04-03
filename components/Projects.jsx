@@ -86,7 +86,7 @@ const Projects = () => {
             en el desarrollo back-end."
             urlGit="https://github.com/itsJRillo/DevGoods"
             urlWeb="https://devgoods.vercel.app"
-            image="/icons/shoten.png"
+            image="/icons/preview.jpg"
           />
         </div>
       </motion.div>
