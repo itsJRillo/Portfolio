@@ -1,30 +1,11 @@
 import styles from "../styles/Projects.module.css";
 import ProjectCard from "./ProjectCard";
-
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import { Link, styled } from "@mui/material";
+import { styled } from "@mui/material";
 
 import { motion } from "framer-motion";
 
 const Projects = () => {
-  const ColorButton = styled(Button)(({ theme }) => ({
-    color: theme.palette.getContrastText("#edbe00"),
-    backgroundColor: "#edbe00",
-    color: "#fff",
-    fontWeight: 900,
-    "&:hover": {
-      backgroundColor: "#12171b",
-      color: "#edb300",
-      fontWeight: 900,
-    },
-  }));
-
-  const maxWidth = 500;
 
   return (
     <motion.div
@@ -67,240 +48,49 @@ const Projects = () => {
         className={styles.cardHolder}
       >
         <div className={styles.cards}>
-          <ProjectCard title="Tabla Periodica" />
+          <ProjectCard
+            title="Tabla Periodica"
+            desc="Página Web hecha con HTML, CSS y JavaScript a modo de refuerzo de
+            conocimientos. En esta página nos encontraremos con una tabla
+            periódica interactiva, que muestra curiosidades del elemento que
+            selecciones así como su estado natural."
+            urlGit="https://github.com/itsJRillo/TablaPeriodica"
+            urlWeb="https://itsjrillo-periodictable.netlify.app"
+            image="/icons/tabla.png"
+          />
 
-          <Card sx={{ maxWidth: maxWidth }}>
-            <CardMedia
-              component="img"
-              alt="pagina web trash-taste"
-              height={300}
-              image="/icons/trash-taste.png"
-            />
-            <CardContent>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={20}
-                gutterBottom
-                variant="h5"
-                component="div"
-              >
-                Trash Taste Podcast
-              </Typography>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={16}
-                variant="body2"
-                color="text.secondary"
-              >
-                Esta página es una especie de recopilación de los episodios del
-                podcast de anime Trash Taste, la hice como práctica con React y
-                librerías como MUI y TailwindCSS. También me permitió trabajar
-                con APIs REST y cómo manejarlas en producción.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <ColorButton
-                target="_blank"
-                href="https://github.com/itsJRillo/TrashTaste-React"
-                variant="contained"
-              >
-                Go to Github
-              </ColorButton>
-              <ColorButton
-                target="_blank"
-                href="https://trash-taste-podcast.netlify.app"
-                variant="contained"
-              >
-                Go to Website
-              </ColorButton>
-            </CardActions>
-          </Card>
+          <ProjectCard
+            title="Trash Taste Podcast"
+            desc="Esta página es una especie de recopilación de los episodios del
+            podcast de anime Trash Taste, la hice como práctica con React y
+            librerías como MUI y TailwindCSS. También me permitió trabajar
+            con APIs REST y cómo manejarlas en producción."
+            urlGit="https://github.com/itsJRillo/TrashTaste-React"
+            urlWeb="https://trash-taste-podcast.netlify.app"
+            image="/icons/trash-taste.png"
+          />
 
-          <Card sx={{ maxWidth: maxWidth }}>
-            <CardMedia
-              component="img"
-              alt="pagina web guitarla"
-              height={300}
-              image="/icons/guitar.png"
-            />
-            <CardContent>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={16}
-                gutterBottom
-                variant="h5"
-                component="div"
-              >
-                Web Guitarras
-              </Typography>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={18}
-                variant="body2"
-                color="text.secondary"
-              >
-                Página hecha con React, Next.js y Node.js. Esta página fue
-                creada en el{" "}
-                <Link
-                  target="_blank"
-                  href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/"
-                >
-                  <b>curso de React de Juan Pablo</b>
-                </Link>{" "}
-                , es un sitio de venta de guitarras con sus propios blogs y
-                sistema de carrito.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <ColorButton
-                target="_blank"
-                href="https://github.com/itsJRillo-CursoReact/GuitarLA"
-                variant="contained"
-              >
-                Go to Github
-              </ColorButton>
-            </CardActions>
-          </Card>
+          <ProjectCard
+            title="SHOTEN - Movie and Series Catalog"
+            desc="Página hecha con React y TypeScript, con un backend y API
+            creados con PocketBase y E2E-testing en deploy con Netlify y
+            Cypress."
+            urlGit="https://github.com/itsJRillo/Shoten"
+            urlWeb="https://shoten-itsjrillo.netlify.app"
+            image="/icons/shoten.png"
+          />
 
-          <Card sx={{ maxWidth: maxWidth }}>
-            <CardMedia
-              component="img"
-              alt="pagina web shoten"
-              height={300}
-              image="/icons/shoten.png"
-            />
-            <CardContent>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={16}
-                gutterBottom
-                variant="h5"
-                component="div"
-              >
-                SHOTEN - Movie and Series Catalog
-              </Typography>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={18}
-                variant="body2"
-                color="text.secondary"
-              >
-                Página hecha con React y TypeScript, con un backend y API
-                creados con PocketBase y E2E-testing en deploy con Netlify y
-                Cypress
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <ColorButton
-                target="_blank"
-                href="https://github.com/itsJRillo/Shoten"
-                variant="contained"
-              >
-                Go to Github
-              </ColorButton>
-              <ColorButton
-                target="_blank"
-                href="https://shoten-itsjrillo.netlify.app"
-                variant="contained"
-              >
-                Go to Website
-              </ColorButton>
-            </CardActions>
-          </Card>
-
-          <Card sx={{ maxWidth: maxWidth }}>
-            <CardMedia
-              component="img"
-              alt="pagina web weblify"
-              height={300}
-              image="/icons/preview.jpg"
-            />
-            <CardContent>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={16}
-                gutterBottom
-                variant="h5"
-                component="div"
-              >
-                DevGoods
-              </Typography>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={18}
-                variant="body2"
-                color="text.secondary"
-              >
-                Este proyecto es un simple sitio web de comercio electrónico
-                construido desde cero usando React, NextJS y Typescript. Sirve
-                como un ejercicio de práctica para mi portafolio, mostrando mis
-                habilidades en el desarrollo front-end, así como mi experiencia
-                en el desarrollo back-end.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <ColorButton
-                target="_blank"
-                href="https://github.com/itsJRillo/DevGoods"
-                variant="contained"
-              >
-                Go to Github
-              </ColorButton>
-              <ColorButton
-                target="_blank"
-                href="https://devgoods.vercel.app"
-                variant="contained"
-              >
-                Go to Website
-              </ColorButton>
-            </CardActions>
-          </Card>
-          
-          <Card sx={{ maxWidth: maxWidth }}>
-            <CardMedia
-              component="img"
-              alt="pagina web guitarla"
-              height={300}
-              image="/icons/guitar.png"
-            />
-            <CardContent>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={16}
-                gutterBottom
-                variant="h5"
-                component="div"
-              >
-                Web Guitarras
-              </Typography>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={18}
-                variant="body2"
-                color="text.secondary"
-              >
-                Página hecha con React, Next.js y Node.js. Esta página fue
-                creada en el{" "}
-                <Link
-                  target="_blank"
-                  href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/"
-                >
-                  <b>curso de React de Juan Pablo</b>
-                </Link>{" "}
-                , es un sitio de venta de guitarras con sus propios blogs y
-                sistema de carrito.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <ColorButton
-                target="_blank"
-                href="https://github.com/itsJRillo-CursoReact/GuitarLA"
-                variant="contained"
-              >
-                Go to Github
-              </ColorButton>
-            </CardActions>
-          </Card>
+          <ProjectCard
+            title="DevGoods E-Commerce"
+            desc="Este proyecto es un simple sitio web de comercio electrónico
+            construido desde cero usando React, NextJS y Typescript. Sirve
+            como un ejercicio de práctica para mi portafolio, mostrando mis
+            habilidades en el desarrollo front-end, así como mi experiencia
+            en el desarrollo back-end."
+            urlGit="https://github.com/itsJRillo/DevGoods"
+            urlWeb="https://devgoods.vercel.app"
+            image="/icons/shoten.png"
+          />
         </div>
       </motion.div>
     </motion.div>
