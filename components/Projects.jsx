@@ -1,8 +1,4 @@
 import styles from "../styles/Projects.module.css";
-import ProjectCard from "./ProjectCard";
-import Button from "@mui/material/Button";
-import { styled } from "@mui/material";
-
 import { motion } from "framer-motion";
 
 const Projects = () => {
