@@ -1,5 +1,6 @@
 import styles from "../styles/Projects.module.css";
 import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
 
