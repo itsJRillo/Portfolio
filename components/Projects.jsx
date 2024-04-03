@@ -1,4 +1,5 @@
 import styles from "../styles/Projects.module.css";
+import ProjectCard from "./ProjectCard";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -66,52 +67,7 @@ const Projects = () => {
         className={styles.cardHolder}
       >
         <div className={styles.cards}>
-          <Card sx={{ maxWidth: maxWidth }}>
-            <CardMedia
-              component="img"
-              alt="pagina web tabla"
-              height={300}
-              image="/icons/tabla.png"
-            />
-            <CardContent>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                gutterBottom
-                fontSize={20}
-                variant="h5"
-                component="div"
-              >
-                Tabla Periódica
-              </Typography>
-              <Typography
-                fontFamily={"Josefin Sans"}
-                fontSize={16}
-                variant="body2"
-                color="text.secondary"
-              >
-                Página Web hecha con HTML, CSS y JavaScript a modo de refuerzo
-                de conocimientos. En esta página nos encontraremos con una tabla
-                periódica interactiva, que muestra curiosidades del elemento que
-                selecciones así como su estado natural.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <ColorButton
-                target="_blank"
-                href="https://github.com/itsJRillo/TablaPeriodica"
-                variant="contained"
-              >
-                Go to Github
-              </ColorButton>
-              <ColorButton
-                target="_blank"
-                href="https://itsjrillo-periodictable.netlify.app"
-                variant="contained"
-              >
-                Go to Website
-              </ColorButton>
-            </CardActions>
-          </Card>
+          <ProjectCard title="Tabla Periodica" />
 
           <Card sx={{ maxWidth: maxWidth }}>
             <CardMedia
@@ -229,7 +185,9 @@ const Projects = () => {
                 variant="body2"
                 color="text.secondary"
               >
-                Página hecha con React y TypeScript, con un backend y API creados con PocketBase y E2E-testing en deploy con Netlify y Cypress
+                Página hecha con React y TypeScript, con un backend y API
+                creados con PocketBase y E2E-testing en deploy con Netlify y
+                Cypress
               </Typography>
             </CardContent>
             <CardActions>
@@ -249,13 +207,13 @@ const Projects = () => {
               </ColorButton>
             </CardActions>
           </Card>
-          
+
           <Card sx={{ maxWidth: maxWidth }}>
             <CardMedia
               component="img"
               alt="pagina web weblify"
               height={300}
-              image="/icons/weblify.png"
+              image="/icons/preview.jpg"
             />
             <CardContent>
               <Typography
@@ -265,7 +223,7 @@ const Projects = () => {
                 variant="h5"
                 component="div"
               >
-                Weblify
+                DevGoods
               </Typography>
               <Typography
                 fontFamily={"Josefin Sans"}
@@ -273,23 +231,73 @@ const Projects = () => {
                 variant="body2"
                 color="text.secondary"
               >
-                Esta página web está desarrollada en Next.js, y facilita a los usuarios el acceso a un formulario alojado en Typeform. Este formulario está vinculado a una base de datos en Supabase mediante Webhooks, posibilita la actualización en tiempo real de la página con las respuestas de los usuarios.
+                Este proyecto es un simple sitio web de comercio electrónico
+                construido desde cero usando React, NextJS y Typescript. Sirve
+                como un ejercicio de práctica para mi portafolio, mostrando mis
+                habilidades en el desarrollo front-end, así como mi experiencia
+                en el desarrollo back-end.
               </Typography>
             </CardContent>
             <CardActions>
               <ColorButton
                 target="_blank"
-                href="https://github.com/itsJRillo/Weblify"
+                href="https://github.com/itsJRillo/DevGoods"
                 variant="contained"
               >
                 Go to Github
               </ColorButton>
               <ColorButton
                 target="_blank"
-                href="https://weblify.vercel.app"
+                href="https://devgoods.vercel.app"
                 variant="contained"
               >
                 Go to Website
+              </ColorButton>
+            </CardActions>
+          </Card>
+          
+          <Card sx={{ maxWidth: maxWidth }}>
+            <CardMedia
+              component="img"
+              alt="pagina web guitarla"
+              height={300}
+              image="/icons/guitar.png"
+            />
+            <CardContent>
+              <Typography
+                fontFamily={"Josefin Sans"}
+                fontSize={16}
+                gutterBottom
+                variant="h5"
+                component="div"
+              >
+                Web Guitarras
+              </Typography>
+              <Typography
+                fontFamily={"Josefin Sans"}
+                fontSize={18}
+                variant="body2"
+                color="text.secondary"
+              >
+                Página hecha con React, Next.js y Node.js. Esta página fue
+                creada en el{" "}
+                <Link
+                  target="_blank"
+                  href="https://www.udemy.com/course/react-de-principiante-a-experto-creando-mas-de-10-aplicaciones/"
+                >
+                  <b>curso de React de Juan Pablo</b>
+                </Link>{" "}
+                , es un sitio de venta de guitarras con sus propios blogs y
+                sistema de carrito.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <ColorButton
+                target="_blank"
+                href="https://github.com/itsJRillo-CursoReact/GuitarLA"
+                variant="contained"
+              >
+                Go to Github
               </ColorButton>
             </CardActions>
           </Card>
